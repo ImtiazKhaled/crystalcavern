@@ -6,7 +6,6 @@ using Pathfinding;
 public class GameTracker : MonoBehaviour
 {
     public GameState gameState;
-    public WindowCrystalPointer pointer;
     void Start()
     {
         gameState.Intialize();
@@ -21,13 +20,4 @@ public class GameTracker : MonoBehaviour
         var graphToScan = AstarPath.active.data.gridGraph;
         AstarPath.active.Scan(graphToScan);
     }
-    void FixedUpdate()
-    {
-        gameState.gameTime += 1;
-    }
-    // public void CrystalShardFound(Transform crystalShardLocation)
-    // {
-    //     // This function will notify the user about the locations of the crystal shards
-    //     pointer.AddCrystalShard(crystalShardLocation);
-    // }
 }

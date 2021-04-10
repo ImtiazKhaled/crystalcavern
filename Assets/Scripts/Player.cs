@@ -5,17 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     int numCrystals = 0;
+    public int health = 100;
 
-    // void Start()
-    // {
-        
-    // }
-
-    // void Update()
-    // {
-
-    // }
-
+    #region Crystals
     public void AcquireCrystal()
     {
         numCrystals++;
@@ -32,4 +24,24 @@ public class Player : MonoBehaviour
 
         return false;
     }
+    #endregion
+
+    #region EnemyInteractions
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if(health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        // Play player death animation
+        // and transition to death screen
+    }
+    #endregion
+
 }
