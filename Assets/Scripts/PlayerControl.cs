@@ -7,6 +7,8 @@ public class PlayerControl : MonoBehaviour
     public float moveSpeed = 20f;
     public Rigidbody2D weaponRb;
     public Transform weaponPosition;
+    public Rigidbody2D pointerRb;
+    public Transform pointerPosition;
     public Rigidbody2D rb;
     public Camera cam;
 
@@ -49,6 +51,7 @@ public class PlayerControl : MonoBehaviour
 
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         weaponRb.MovePosition(new Vector2(weaponPosition.position.x, weaponPosition.position.y) + movement * moveSpeed * Time.fixedDeltaTime);
+        pointerRb.MovePosition(new Vector2(pointerPosition.position.x, pointerPosition.position.y) + movement * moveSpeed * Time.fixedDeltaTime);
 
         float angle = Mathf.Atan2(pointDir.y, pointDir.x) * Mathf.Rad2Deg;
         weaponRb.rotation = angle;

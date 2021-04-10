@@ -19,7 +19,7 @@ public class Projectile : MonoBehaviour
         }
 
         // Otherwise delete the projectile and play the collision effect 
-        GameObject collisionObj = Instantiate(collisionEffect, transform.position, Quaternion.identity);
+        GameObject collisionObj = Instantiate(collisionEffect, transform.position, transform.rotation);
         Destroy(collisionObj, collisionDuration);
         Destroy(gameObject);
     }

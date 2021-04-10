@@ -5,10 +5,13 @@ using Pathfinding;
 public class Enemy : MonoBehaviour
 {
     public int health = 100;
-    public int agroDistance = 100;
+    public int enemyDamage = 25;
     public Transform target;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask playerLayer;
 
     Path path;
     int currentWayPoint = 0;
@@ -36,6 +39,7 @@ public class Enemy : MonoBehaviour
         if(currentWayPoint >= path.vectorPath.Count)
         {
             reachedEndOfPath = true;
+            EnemyHit();
             return;
         }
         else
@@ -80,6 +84,38 @@ public class Enemy : MonoBehaviour
             currentWayPoint = 0;
         }
     }
+    #endregion
+
+    # region Enemy Attack 
+    void EnemyHit()
+    {
+        // If the enemy is in the attack animation, don't attack
+        // This makes the enemy attack physically if the player is within range of the enemy
+        if(reachedEndOfPath) {
+            Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
+            foreach(Collider2D player in hitPlayer)
+            {
+                Player playerObj = player.GetComponent<Player>();
+
+                if(playerObj != null) 
+                {
+                    // Play enemy attack animation here
+                    playerObj.TakeDamage(enemyDamage);
+                }
+
+            }
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if(attackPoint == null)
+            return;
+
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);        
+
+    }
+
     #endregion
 
     #region Enemy Health
