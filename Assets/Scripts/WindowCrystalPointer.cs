@@ -4,45 +4,44 @@ using UnityEngine;
 
 public class WindowCrystalPointer : MonoBehaviour
 {
-    public Transform[] crystalShardPostions;
     public Transform crystalPosition;
     public Rigidbody2D rb;
-    bool gotCrystals = false;
+    public GameState gameState;
+
     void Update()
     {
+        List<Transform> crystalShardPositions = gameState.crystalLocations;
 
         Vector2 pointDir = new Vector2(0, 0);
+        Debug.Log(gameState.crystalLocations);
 
-        if(!gotCrystals)
+
+        for(int i = 0; i < crystalShardPositions.Count; i++)
         {
-            bool checkCrystals = true;
-
-            for(int i = 0; i < crystalShardPostions.Length; i++)
+            if(crystalShardPositions[i] != null)
             {
-                if(crystalShardPostions[i] != null)
+                Vector2 currDist = new Vector2(crystalShardPositions[i].position.x, crystalShardPositions[i].position.y) - rb.position; 
+    
+                if(pointDir == new Vector2(0, 0))
                 {
-                    Vector2 currDist = new Vector2(crystalShardPostions[i].position.x, crystalShardPostions[i].position.y) - rb.position; 
-                    if(pointDir == new Vector2(0, 0))
+                    pointDir = currDist;
+                }
+                else
+                {
+
+                    if(currDist.magnitude < pointDir.magnitude)
                     {
                         pointDir = currDist;
                     }
-                    else
-                    {
-
-                        if(currDist.magnitude < pointDir.magnitude)
-                        {
-                            pointDir = currDist;
-                        }
-                    }
-                    
-                    checkCrystals = false;
                 }
             }
-
-            gotCrystals = checkCrystals;
+            else
+            {
+                gameState.crystalLocations.RemoveAt(i);
+            }
         }
 
-        if(gotCrystals)
+        if(crystalShardPositions.Count == 0)
         {
             pointDir = new Vector2(crystalPosition.position.x, crystalPosition.position.y) - rb.position; 
         }
