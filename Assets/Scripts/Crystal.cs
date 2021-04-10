@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Crystal : MonoBehaviour
 {
@@ -10,7 +11,6 @@ public class Crystal : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         Player player = collision.gameObject.GetComponent<Player>();
-        Debug.Log("Collided");
         if(player != null)
         {
             bool tookCrystal = player.TakeACrystal();
@@ -21,20 +21,11 @@ public class Crystal : MonoBehaviour
 
                 if(numCrystals == crystalsNeeded)
                 {
-                    Debug.Log("Got it bro");
+                    // Play some animation and dialog here
+                    SceneManager.LoadScene("End");
                 }
             }
 
         }
     }
-
-    // void Start()
-    // {
-        
-    // }
-
-    // void Update()
-    // {
-        
-    // }
 }

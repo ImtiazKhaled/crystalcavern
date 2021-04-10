@@ -87,7 +87,7 @@ public class Enemy : MonoBehaviour
     void EnemyHit()
     {
         if(reachedEndOfPath) {
-            Debug.Log("Enemy is attacking");
+            // Add enemy attack here
         }
     }
     #endregion
