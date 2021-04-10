@@ -41,6 +41,7 @@ public class Enemy : MonoBehaviour
         else
         {
             reachedEndOfPath = false;
+            EnemyHit();
         }
 
         Vector2 direction = ((Vector2)path.vectorPath[currentWayPoint] - rb.position).normalized;
@@ -78,6 +79,15 @@ public class Enemy : MonoBehaviour
         {
             path = p;
             currentWayPoint = 0;
+        }
+    }
+    #endregion
+
+    # region Enemy Attack 
+    void EnemyHit()
+    {
+        if(reachedEndOfPath) {
+            Debug.Log("Enemy is attacking");
         }
     }
     #endregion
