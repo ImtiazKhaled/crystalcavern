@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GameState
   m_EditorClassIdentifier: 
   gameTime: 0
-  crystalLocations:
+  crystalShardLocations:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

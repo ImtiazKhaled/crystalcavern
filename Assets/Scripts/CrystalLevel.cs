@@ -9,6 +9,6 @@ public class CrystalLevel : MonoBehaviour
 
     void Start()
     {
-        gameState.crystalLocations.Add(crystalShardLocation);
+        gameState.crystalShardLocations.Add(crystalShardLocation);
     }
 }

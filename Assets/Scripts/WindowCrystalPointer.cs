@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class WindowCrystalPointer : MonoBehaviour
 {
-    public Transform crystalPosition;
     public Rigidbody2D rb;
     public GameState gameState;
 
     void Update()
     {
-        List<Transform> crystalShardPositions = gameState.crystalLocations;
+        List<Transform> crystalShardPositions = gameState.crystalShardLocations;
+        Transform crystalPosition = gameState.crystalLocation;
+
 
         Vector2 pointDir = new Vector2(0, 0);
-        Debug.Log(gameState.crystalLocations);
 
 
         for(int i = 0; i < crystalShardPositions.Count; i++)
@@ -37,7 +37,7 @@ public class WindowCrystalPointer : MonoBehaviour
             }
             else
             {
-                gameState.crystalLocations.RemoveAt(i);
+                gameState.crystalShardLocations.RemoveAt(i);
             }
         }
 
