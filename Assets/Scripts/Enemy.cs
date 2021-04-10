@@ -8,10 +8,12 @@ public class Enemy : MonoBehaviour
     public int enemyDamage = 25;
     public Transform target;
     public float speed = 200f;
+    public int speicalGained = 25;
     public float nextWaypointDistance = 3f;
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask playerLayer;
+    public GameState gameState;
 
     Path path;
     int currentWayPoint = 0;
@@ -129,8 +131,23 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void SpecialHit(int damage)
+    {
+        health -= damage;
+        // Play exploding animation
+
+        // Delete the object if the health is zero
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+        // otherwise let them return back to normal
+    }
+
     void Die()
     {
+        gameState.EnemyDied(speicalGained);
         // Play die animation here
         Destroy(gameObject);
     }

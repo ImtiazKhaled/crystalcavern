@@ -6,11 +6,19 @@ using UnityEngine;
 public class GameState : ScriptableObject
 {
     public float gameTime = 0;
-    public List<Transform> crystalLocations = new List<Transform>();
+    public List<Transform> crystalShardLocations = new List<Transform>();
+    public Transform crystalLocation;
+    public Player player;
 
     public void Intialize()
     {
         gameTime = 0;
-        crystalLocations = new List<Transform>();
+        crystalShardLocations = new List<Transform>();
+        crystalLocation = null;
+    }
+
+    public void EnemyDied(int speicalGained)
+    {
+        player.GainSpeical(speicalGained);
     }
 }
