@@ -217,10 +217,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  agroDistance: 100
+  enemyDamage: 25
   target: {fileID: 119983964}
   speed: 600
   nextWaypointDistance: 3
+  attackPoint: {fileID: 0}
+  attackRange: 0.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &23217492
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -658,6 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4d7d14e550ca7445be4d84ad5eb09f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &129012270
 GameObject:
   m_ObjectHideFlags: 0
@@ -4148,10 +4154,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  agroDistance: 100
+  enemyDamage: 25
   target: {fileID: 119983964}
   speed: 600
   nextWaypointDistance: 3
+  attackPoint: {fileID: 0}
+  attackRange: 0.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &269274131
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4393,7 +4404,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: {fileID: 11400000, guid: 2f24dda7adef4e2498e267ca5624d15e, type: 2}
-  pointer: {fileID: 1896499770}
 --- !u!1 &308073590
 GameObject:
   m_ObjectHideFlags: 0
@@ -5688,10 +5698,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  agroDistance: 100
+  enemyDamage: 25
   target: {fileID: 119983964}
   speed: 600
   nextWaypointDistance: 3
+  attackPoint: {fileID: 0}
+  attackRange: 0.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &743748261
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6202,10 +6217,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  agroDistance: 100
+  enemyDamage: 25
   target: {fileID: 119983964}
   speed: 600
   nextWaypointDistance: 3
+  attackPoint: {fileID: 0}
+  attackRange: 0.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &957511784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6282,10 +6302,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  agroDistance: 100
+  enemyDamage: 25
   target: {fileID: 119983964}
   speed: 600
   nextWaypointDistance: 3
+  attackPoint: {fileID: 0}
+  attackRange: 0.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &962520017
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6731,10 +6756,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  agroDistance: 100
+  enemyDamage: 25
   target: {fileID: 119983964}
   speed: 600
   nextWaypointDistance: 3
+  attackPoint: {fileID: 0}
+  attackRange: 0.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &1066078958
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6956,10 +6986,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  agroDistance: 100
+  enemyDamage: 25
   target: {fileID: 119983964}
   speed: 600
   nextWaypointDistance: 3
+  attackPoint: {fileID: 0}
+  attackRange: 0.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &1084348850
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8613,7 +8648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crystalPosition: {fileID: 1399756466}
   rb: {fileID: 1896499771}
-  gameState: {fileID: 0}
+  gameState: {fileID: 11400000, guid: 2f24dda7adef4e2498e267ca5624d15e, type: 2}
 --- !u!50 &1896499771
 Rigidbody2D:
   serializedVersion: 4
@@ -8779,10 +8814,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  agroDistance: 100
+  enemyDamage: 25
   target: {fileID: 119983964}
   speed: 600
   nextWaypointDistance: 3
+  attackPoint: {fileID: 0}
+  attackRange: 0.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &1938651394
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9198,10 +9238,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  agroDistance: 100
+  enemyDamage: 25
   target: {fileID: 119983964}
   speed: 600
   nextWaypointDistance: 3
+  attackPoint: {fileID: 0}
+  attackRange: 0.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &1988515587
 BoxCollider2D:
   m_ObjectHideFlags: 0
