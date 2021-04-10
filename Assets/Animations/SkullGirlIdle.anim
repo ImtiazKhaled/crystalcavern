@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bow
+  m_Name: SkullGirlIdle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,19 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -415446080585258355, guid: 3a5eb15a657d798488343c2a7cbdf424,
+      value: {fileID: 5078777348473135372, guid: e7ab56f93ecd22744bfdb81d01ec5406,
+        type: 3}
+    - time: 0.1
+      value: {fileID: -6191860241263641602, guid: e7ab56f93ecd22744bfdb81d01ec5406,
+        type: 3}
+    - time: 0.2
+      value: {fileID: -1705283369533354874, guid: e7ab56f93ecd22744bfdb81d01ec5406,
         type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 25
+  m_SampleRate: 10
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -41,13 +47,15 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -415446080585258355, guid: 3a5eb15a657d798488343c2a7cbdf424, type: 3}
+    - {fileID: 5078777348473135372, guid: e7ab56f93ecd22744bfdb81d01ec5406, type: 3}
+    - {fileID: -6191860241263641602, guid: e7ab56f93ecd22744bfdb81d01ec5406, type: 3}
+    - {fileID: -1705283369533354874, guid: e7ab56f93ecd22744bfdb81d01ec5406, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.04
+    m_StopTime: 0.3
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

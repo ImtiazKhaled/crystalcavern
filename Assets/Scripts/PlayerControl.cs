@@ -11,6 +11,9 @@ public class PlayerControl : MonoBehaviour
     public Transform pointerPosition;
     public Rigidbody2D rb;
     public Camera cam;
+    public GameState gameState;
+    public Animator animator;
+    public SpriteRenderer spriteRenderer;
 
     Vector2 movement;
     Vector2 mousePosition;
@@ -18,36 +21,39 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        if(!gameState.playerDead)
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            if(movement.x < -0.01 & facingRight) 
+            {
+                spriteRenderer.flipX = true;
+                facingRight = false;
+            }
 
-        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
+            else if(movement.x > 0.01 & !facingRight) 
+            {
+                spriteRenderer.flipX = false;
+                facingRight = true;
+            }
+
+            movement.y = Input.GetAxisRaw("Vertical");
+
+            mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
+        }
     }
 
     void FixedUpdate()
     {
         Vector2 pointDir = mousePosition - weaponRb.position;
 
-        if(pointDir.x < -0.01 & facingRight) 
+        if (movement.x == 0 & movement.y == 0)
         {
-            // Play moving left animation
-            facingRight = false;
+            animator.SetFloat("MoveSpeed", 0f);
         }
-
-        else if(pointDir.x > 0.01 & !facingRight) 
+        else
         {
-            // Play moving right animation
-            facingRight = true;
+            animator.SetFloat("MoveSpeed", moveSpeed);
         }
-
-        // if (movement.x == 0 & movement.y == 0)
-        // {
-        //     animator.SetFloat("MoveSpeed", 0f);
-        // }
-        // else
-        // {
-        //     animator.SetFloat("MoveSpeed", moveSpeed);
-        // }
 
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         weaponRb.MovePosition(new Vector2(weaponPosition.position.x, weaponPosition.position.y) + movement * moveSpeed * Time.fixedDeltaTime);

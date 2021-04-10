@@ -1,67 +1,73 @@
 fileFormatVersion: 2
-guid: 5f337e3fcaadf3642a472b739960e411
+guid: e7ab56f93ecd22744bfdb81d01ec5406
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4334783836991956000
-    second: player_0
+      213: 5078777348473135372
+    second: skullgirl_0
   - first:
-      213: 7388399842426930641
-    second: player_1
+      213: -6191860241263641602
+    second: skullgirl_1
   - first:
-      213: 6757282713640645180
-    second: player_2
+      213: -1705283369533354874
+    second: skullgirl_2
   - first:
-      213: -6781412095145881161
-    second: player_3
+      213: -3818591249204622713
+    second: skullgirl_3
   - first:
-      213: 1755772209161902963
-    second: player_4
+      213: -4514343420738480636
+    second: skullgirl_4
   - first:
-      213: 5865078278364869351
-    second: player_5
+      213: 7903199228506467662
+    second: skullgirl_5
   - first:
-      213: -2023923573111878767
-    second: player_6
+      213: 3702908930628698413
+    second: skullgirl_6
   - first:
-      213: -540375121143967267
-    second: player_7
+      213: 2523855858350688633
+    second: skullgirl_7
   - first:
-      213: -1205440766039775075
-    second: player_8
+      213: -8195746811646607631
+    second: skullgirl_8
   - first:
-      213: 5602337906906987636
-    second: player_9
+      213: -8308969741074726449
+    second: skullgirl_9
   - first:
-      213: -3861952770410913445
-    second: player_10
+      213: -3895140790023566386
+    second: skullgirl_10
   - first:
-      213: 5044450397378941176
-    second: player_11
+      213: -8099779179638297670
+    second: skullgirl_11
   - first:
-      213: 1871739406167786269
-    second: player_12
+      213: -6217944339730527332
+    second: skullgirl_12
   - first:
-      213: 6426868497666326525
-    second: player_13
+      213: 6204643798403947061
+    second: skullgirl_13
   - first:
-      213: -2418196558428526619
-    second: player_14
+      213: -9208208040235118958
+    second: skullgirl_14
   - first:
-      213: -480808811739928509
-    second: player_15
+      213: 196856909118670648
+    second: skullgirl_15
   - first:
-      213: -7814200450545973387
-    second: player_16
+      213: 3291613834573906216
+    second: skullgirl_16
   - first:
-      213: -7689382371589266427
-    second: player_17
+      213: -3991705366004613717
+    second: skullgirl_17
   - first:
-      213: -6119387374007233121
-    second: player_18
+      213: 8655835557248627266
+    second: skullgirl_18
   - first:
-      213: 5435452280369712508
-    second: player_19
+      213: -7920155721680534959
+    second: skullgirl_19
+  - first:
+      213: -1172823181000930463
+    second: skullgirl_20
+  - first:
+      213: -4508341977028239590
+    second: skullgirl_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -171,7 +177,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_0
+      name: skullgirl_0
       rect:
         serializedVersion: 2
         x: 0
@@ -185,14 +191,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 024a20edeee382c30800000000000000
-      internalID: 4334783836991956000
+      spriteID: c01aa0507117b7640800000000000000
+      internalID: 5078777348473135372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1
+      name: skullgirl_1
       rect:
         serializedVersion: 2
         x: 32
@@ -206,14 +212,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d5c862e28ed88660800000000000000
-      internalID: 7388399842426930641
+      spriteID: efbbd9c9ae7121aa0800000000000000
+      internalID: -6191860241263641602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_2
+      name: skullgirl_2
       rect:
         serializedVersion: 2
         x: 64
@@ -227,14 +233,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c32307193d0b6cd50800000000000000
-      internalID: 6757282713640645180
+      spriteID: 68c45957fcd9558e0800000000000000
+      internalID: -1705283369533354874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_3
+      name: skullgirl_3
       rect:
         serializedVersion: 2
         x: 96
@@ -248,14 +254,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b1da4101a593e1a0800000000000000
-      internalID: -6781412095145881161
+      spriteID: 78a4eb89d73a10bc0800000000000000
+      internalID: -3818591249204622713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_4
+      name: skullgirl_4
       rect:
         serializedVersion: 2
         x: 128
@@ -269,14 +275,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37b19919581cd5810800000000000000
-      internalID: 1755772209161902963
+      spriteID: 406d2cca394d951c0800000000000000
+      internalID: -4514343420738480636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_5
+      name: skullgirl_5
       rect:
         serializedVersion: 2
         x: 160
@@ -290,14 +296,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e23cc1ae91f46150800000000000000
-      internalID: 5865078278364869351
+      spriteID: e4de44c43ddcdad60800000000000000
+      internalID: 7903199228506467662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_6
+      name: skullgirl_6
       rect:
         serializedVersion: 2
         x: 192
@@ -311,14 +317,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19b8024cb3499e3e0800000000000000
-      internalID: -2023923573111878767
+      spriteID: d21ceb5bd00636330800000000000000
+      internalID: 3702908930628698413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_7
+      name: skullgirl_7
       rect:
         serializedVersion: 2
         x: 224
@@ -332,14 +338,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd151cab0b33088f0800000000000000
-      internalID: -540375121143967267
+      spriteID: 979084df789860320800000000000000
+      internalID: 2523855858350688633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_8
+      name: skullgirl_8
       rect:
         serializedVersion: 2
         x: 256
@@ -353,14 +359,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d98ac6e820a654fe0800000000000000
-      internalID: -1205440766039775075
+      spriteID: 1fe73ce92bbd24e80800000000000000
+      internalID: -8195746811646607631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_9
+      name: skullgirl_9
       rect:
         serializedVersion: 2
         x: 288
@@ -374,14 +380,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47c75e4d4a08fbd40800000000000000
-      internalID: 5602337906906987636
+      spriteID: fc185c51b0c90bc80800000000000000
+      internalID: -8308969741074726449
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_10
+      name: skullgirl_10
       rect:
         serializedVersion: 2
         x: 320
@@ -395,14 +401,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b516254ba66976ac0800000000000000
-      internalID: -3861952770410913445
+      spriteID: ecbc28cb61ea1f9c0800000000000000
+      internalID: -3895140790023566386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_11
+      name: skullgirl_11
       rect:
         serializedVersion: 2
         x: 352
@@ -416,14 +422,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f099d6e8ec710640800000000000000
-      internalID: 5044450397378941176
+      spriteID: abbed8620cdc79f80800000000000000
+      internalID: -8099779179638297670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_12
+      name: skullgirl_12
       rect:
         serializedVersion: 2
         x: 384
@@ -437,14 +443,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d134bb0b211c9f910800000000000000
-      internalID: 1871739406167786269
+      spriteID: c9b063d219c65b9a0800000000000000
+      internalID: -6217944339730527332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_13
+      name: skullgirl_13
       rect:
         serializedVersion: 2
         x: 416
@@ -458,14 +464,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dffbc8df8d2d03950800000000000000
-      internalID: 6426868497666326525
+      spriteID: 53a92b939a25b1650800000000000000
+      internalID: 6204643798403947061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_14
+      name: skullgirl_14
       rect:
         serializedVersion: 2
         x: 448
@@ -479,14 +485,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e7abc1da07d07ed0800000000000000
-      internalID: -2418196558428526619
+      spriteID: 29ec3e7139fd53080800000000000000
+      internalID: -9208208040235118958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_15
+      name: skullgirl_15
       rect:
         serializedVersion: 2
         x: 480
@@ -500,14 +506,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3482d53eee2d359f0800000000000000
-      internalID: -480808811739928509
+      spriteID: 837899bd0506bb200800000000000000
+      internalID: 196856909118670648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_16
+      name: skullgirl_16
       rect:
         serializedVersion: 2
         x: 512
@@ -521,14 +527,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 577828577126e8390800000000000000
-      internalID: -7814200450545973387
+      spriteID: 8210a83c7592ead20800000000000000
+      internalID: 3291613834573906216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_17
+      name: skullgirl_17
       rect:
         serializedVersion: 2
         x: 544
@@ -542,14 +548,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 504654f1973d94590800000000000000
-      internalID: -7689382371589266427
+      spriteID: bad364b5e1d9a98c0800000000000000
+      internalID: -3991705366004613717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_18
+      name: skullgirl_18
       rect:
         serializedVersion: 2
         x: 576
@@ -563,14 +569,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f95d941fa91931ba0800000000000000
-      internalID: -6119387374007233121
+      spriteID: 242fff72494bf1870800000000000000
+      internalID: 8655835557248627266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_19
+      name: skullgirl_19
       rect:
         serializedVersion: 2
         x: 608
@@ -584,8 +590,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7d060dfc0b9e6b40800000000000000
-      internalID: 5435452280369712508
+      spriteID: 152447b7554f51290800000000000000
+      internalID: -7920155721680534959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skullgirl_20
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b8810e78b49bfe0800000000000000
+      internalID: -1172823181000930463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skullgirl_21
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1fdf3dabd62f61c0800000000000000
+      internalID: -4508341977028239590
       vertices: []
       indices: 
       edges: []

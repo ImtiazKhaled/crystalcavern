@@ -1,67 +1,73 @@
 fileFormatVersion: 2
-guid: 5f337e3fcaadf3642a472b739960e411
+guid: 36806f33b1a00f14189df8e15f263ba4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4334783836991956000
-    second: player_0
+      213: -4908421335747952398
+    second: rockymonster_0
   - first:
-      213: 7388399842426930641
-    second: player_1
+      213: 1555528109898286687
+    second: rockymonster_1
   - first:
-      213: 6757282713640645180
-    second: player_2
+      213: 8835016290001200788
+    second: rockymonster_2
   - first:
-      213: -6781412095145881161
-    second: player_3
+      213: -8725169397908502371
+    second: rockymonster_3
   - first:
-      213: 1755772209161902963
-    second: player_4
+      213: 5794378048120153662
+    second: rockymonster_4
   - first:
-      213: 5865078278364869351
-    second: player_5
+      213: 30579211567469253
+    second: rockymonster_5
   - first:
-      213: -2023923573111878767
-    second: player_6
+      213: -3574582961393358756
+    second: rockymonster_6
   - first:
-      213: -540375121143967267
-    second: player_7
+      213: 6702558275817146448
+    second: rockymonster_7
   - first:
-      213: -1205440766039775075
-    second: player_8
+      213: 746243090855697938
+    second: rockymonster_8
   - first:
-      213: 5602337906906987636
-    second: player_9
+      213: -1253506026874782177
+    second: rockymonster_9
   - first:
-      213: -3861952770410913445
-    second: player_10
+      213: -3566472243404600687
+    second: rockymonster_10
   - first:
-      213: 5044450397378941176
-    second: player_11
+      213: -7835464235459553662
+    second: rockymonster_11
   - first:
-      213: 1871739406167786269
-    second: player_12
+      213: 7872513500025972516
+    second: rockymonster_12
   - first:
-      213: 6426868497666326525
-    second: player_13
+      213: -7911859835716265513
+    second: rockymonster_13
   - first:
-      213: -2418196558428526619
-    second: player_14
+      213: -289280702857705370
+    second: rockymonster_14
   - first:
-      213: -480808811739928509
-    second: player_15
+      213: -89638750035822453
+    second: rockymonster_15
   - first:
-      213: -7814200450545973387
-    second: player_16
+      213: -3750623746570089794
+    second: rockymonster_16
   - first:
-      213: -7689382371589266427
-    second: player_17
+      213: 2107841187735189495
+    second: rockymonster_17
   - first:
-      213: -6119387374007233121
-    second: player_18
+      213: 8572740005587234642
+    second: rockymonster_18
   - first:
-      213: 5435452280369712508
-    second: player_19
+      213: -7159770718554192975
+    second: rockymonster_19
+  - first:
+      213: 3375318662894191211
+    second: rockymonster_20
+  - first:
+      213: -3928114642636494132
+    second: rockymonster_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -171,7 +177,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_0
+      name: rockymonster_0
       rect:
         serializedVersion: 2
         x: 0
@@ -185,14 +191,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 024a20edeee382c30800000000000000
-      internalID: 4334783836991956000
+      spriteID: 2f08bc21dc8c1ebb0800000000000000
+      internalID: -4908421335747952398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1
+      name: rockymonster_1
       rect:
         serializedVersion: 2
         x: 32
@@ -206,14 +212,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d5c862e28ed88660800000000000000
-      internalID: 7388399842426930641
+      spriteID: f564f9c0398569510800000000000000
+      internalID: 1555528109898286687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_2
+      name: rockymonster_2
       rect:
         serializedVersion: 2
         x: 64
@@ -227,14 +233,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c32307193d0b6cd50800000000000000
-      internalID: 6757282713640645180
+      spriteID: 496af4e71884c9a70800000000000000
+      internalID: 8835016290001200788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_3
+      name: rockymonster_3
       rect:
         serializedVersion: 2
         x: 96
@@ -248,14 +254,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b1da4101a593e1a0800000000000000
-      internalID: -6781412095145881161
+      spriteID: d980e8819a8f9e680800000000000000
+      internalID: -8725169397908502371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_4
+      name: rockymonster_4
       rect:
         serializedVersion: 2
         x: 128
@@ -269,14 +275,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37b19919581cd5810800000000000000
-      internalID: 1755772209161902963
+      spriteID: e36e5848224c96050800000000000000
+      internalID: 5794378048120153662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_5
+      name: rockymonster_5
       rect:
         serializedVersion: 2
         x: 160
@@ -290,14 +296,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e23cc1ae91f46150800000000000000
-      internalID: 5865078278364869351
+      spriteID: 5c29df281a3ac6000800000000000000
+      internalID: 30579211567469253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_6
+      name: rockymonster_6
       rect:
         serializedVersion: 2
         x: 192
@@ -311,14 +317,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19b8024cb3499e3e0800000000000000
-      internalID: -2023923573111878767
+      spriteID: c582cfd4cb7846ec0800000000000000
+      internalID: -3574582961393358756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_7
+      name: rockymonster_7
       rect:
         serializedVersion: 2
         x: 224
@@ -332,14 +338,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd151cab0b33088f0800000000000000
-      internalID: -540375121143967267
+      spriteID: 0588f6c7d35440d50800000000000000
+      internalID: 6702558275817146448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_8
+      name: rockymonster_8
       rect:
         serializedVersion: 2
         x: 256
@@ -353,14 +359,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d98ac6e820a654fe0800000000000000
-      internalID: -1205440766039775075
+      spriteID: 21e1b8a23203b5a00800000000000000
+      internalID: 746243090855697938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_9
+      name: rockymonster_9
       rect:
         serializedVersion: 2
         x: 288
@@ -374,14 +380,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47c75e4d4a08fbd40800000000000000
-      internalID: 5602337906906987636
+      spriteID: f1e3150f8e6aa9ee0800000000000000
+      internalID: -1253506026874782177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_10
+      name: rockymonster_10
       rect:
         serializedVersion: 2
         x: 320
@@ -395,14 +401,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b516254ba66976ac0800000000000000
-      internalID: -3861952770410913445
+      spriteID: 19a049ef368518ec0800000000000000
+      internalID: -3566472243404600687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_11
+      name: rockymonster_11
       rect:
         serializedVersion: 2
         x: 352
@@ -416,14 +422,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f099d6e8ec710640800000000000000
-      internalID: 5044450397378941176
+      spriteID: 286d72bbac6d24390800000000000000
+      internalID: -7835464235459553662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_12
+      name: rockymonster_12
       rect:
         serializedVersion: 2
         x: 384
@@ -437,14 +443,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d134bb0b211c9f910800000000000000
-      internalID: 1871739406167786269
+      spriteID: 427e3826159c04d60800000000000000
+      internalID: 7872513500025972516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_13
+      name: rockymonster_13
       rect:
         serializedVersion: 2
         x: 416
@@ -458,14 +464,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dffbc8df8d2d03950800000000000000
-      internalID: 6426868497666326525
+      spriteID: 7d99373f56d633290800000000000000
+      internalID: -7911859835716265513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_14
+      name: rockymonster_14
       rect:
         serializedVersion: 2
         x: 448
@@ -479,14 +485,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e7abc1da07d07ed0800000000000000
-      internalID: -2418196558428526619
+      spriteID: 6688ac1cbb44cfbf0800000000000000
+      internalID: -289280702857705370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_15
+      name: rockymonster_15
       rect:
         serializedVersion: 2
         x: 480
@@ -500,14 +506,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3482d53eee2d359f0800000000000000
-      internalID: -480808811739928509
+      spriteID: b883102280a81cef0800000000000000
+      internalID: -89638750035822453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_16
+      name: rockymonster_16
       rect:
         serializedVersion: 2
         x: 512
@@ -521,14 +527,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 577828577126e8390800000000000000
-      internalID: -7814200450545973387
+      spriteID: eba8b8bf29b13fbc0800000000000000
+      internalID: -3750623746570089794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_17
+      name: rockymonster_17
       rect:
         serializedVersion: 2
         x: 544
@@ -542,14 +548,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 504654f1973d94590800000000000000
-      internalID: -7689382371589266427
+      spriteID: 7f7b4e5746e804d10800000000000000
+      internalID: 2107841187735189495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_18
+      name: rockymonster_18
       rect:
         serializedVersion: 2
         x: 576
@@ -563,14 +569,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f95d941fa91931ba0800000000000000
-      internalID: -6119387374007233121
+      spriteID: 25faec06d9d78f670800000000000000
+      internalID: 8572740005587234642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_19
+      name: rockymonster_19
       rect:
         serializedVersion: 2
         x: 608
@@ -584,8 +590,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7d060dfc0b9e6b40800000000000000
-      internalID: 5435452280369712508
+      spriteID: 1b3855f277263ac90800000000000000
+      internalID: -7159770718554192975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockymonster_20
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b620e81d07a87de20800000000000000
+      internalID: 3375318662894191211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rockymonster_21
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca24a86b888c79c0800000000000000
+      internalID: -3928114642636494132
       vertices: []
       indices: 
       edges: []

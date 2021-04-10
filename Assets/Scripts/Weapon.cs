@@ -12,18 +12,23 @@ public class Weapon : MonoBehaviour
     public float projectileForce = 20f;
     public Camera cam;
     public int specialDamage = 100;
+    public GameState gameState;
+
     List<Enemy> visibleEnemies = new List<Enemy>();
 
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if(!gameState.playerDead)
         {
-            Shoot();
-        }
-        else if(Input.GetButtonDown("Fire2") & playerObj.canSpecial)
-        {
-            Special();
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Shoot();
+            }
+            else if(Input.GetButtonDown("Fire2") & playerObj.canSpecial)
+            {
+                Special();
+            }
         }
     }
 

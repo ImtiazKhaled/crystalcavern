@@ -9,9 +9,11 @@ public class GameState : ScriptableObject
     public List<Transform> crystalShardLocations = new List<Transform>();
     public Transform crystalLocation;
     public Player player;
+    public bool playerDead;
 
     public void Intialize()
     {
+        playerDead = false;
         gameTime = 0;
         crystalShardLocations = new List<Transform>();
         crystalLocation = null;
