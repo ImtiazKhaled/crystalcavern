@@ -58,14 +58,16 @@ public class Player : MonoBehaviour
 
     void Die()
     {
-        // Play player death animation
         gameState.playerDead = true;
         animator.SetTrigger("IsDead");
-
-        SceneManager.LoadScene("Dead");
-        // and transition to death screen
+        Invoke("TransitionToDeathScreen", 5f);
     }
 
+    void TransitionToDeathScreen()
+    {
+        SceneManager.LoadScene("Dead");
+    }
+ 
     public void GainSpeical(int specialGained)
     {
         special += specialGained;

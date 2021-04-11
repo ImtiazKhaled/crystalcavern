@@ -9,6 +9,7 @@ public class GameTracker : MonoBehaviour
     public GameObject rockyMonster;
     public GameObject skullGirl;
     public Transform playerLocation;
+    public PowerUpMenu powerUpMenu;
 
     void Start()
     {
@@ -64,10 +65,22 @@ public class GameTracker : MonoBehaviour
         }
     }
 
+    public void GotCrystal(int numEnemiesToSpawn)
+    {
+        SpawnEnemies(numEnemiesToSpawn, 5f, 9f);
+        powerUpMenu.BringUpMenu();
+    }
+
+    public void CloseMenu()
+    {
+        powerUpMenu.CloseMenu();
+    }
+
     public void SpawnEnemiesConstant()
     {
         SpawnEnemies(0, 8f, 13f);
     }
+
     Vector3? GetValidSpawnLocation(float startRange = 8f, float endRange = 13f)
     {
         Vector3 spawnLocation = Util.GetRandomPosition(playerLocation.position, startRange, endRange);

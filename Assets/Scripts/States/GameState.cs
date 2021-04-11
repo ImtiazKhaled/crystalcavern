@@ -20,16 +20,16 @@ public class GameState : ScriptableObject
 
     public void Intialize()
     {
-        playerDead = false;
         gameTime = 0;
         crystalShardLocations = new List<Transform>();
         crystalLocation = null;
         numEnemies = 0;
         maxEnemies = 5;
-        cyrstalMonsterMobNumber = 7;
-        attackBoost = 15;
+        cyrstalMonsterMobNumber = 12;
+        attackBoost = 0;
         speedBoost = 0;
-        defenseBoost = 15;
+        defenseBoost = 0;
+        playerDead = false;
     }
 
     public void EnemyDied(int speicalGained)
@@ -39,24 +39,27 @@ public class GameState : ScriptableObject
 
     public void GotCrystal()
     {
-        int boostChoice = Random.Range(0, 2);
-        Debug.Log("Choice was " + boostChoice);
-        switch(boostChoice)
-        {
-            default:
-            case 0:
-                attackBoost += 20;
-                break;
-            case 1:
-                speedBoost += 3;
-                break;
-            case 2:
-                defenseBoost += 15;
-                break;
-        }
-
+        player.AcquireCrystal();
         maxEnemies += 5;
-        int numEnemiesToSpawn = (cyrstalMonsterMobNumber * 2) - ((crystalShardLocations.Count + 1) * 2);
-        gameTracker.SpawnEnemies(numEnemiesToSpawn, 5f, 9f);
+        int numEnemiesToSpawn = cyrstalMonsterMobNumber - ((crystalShardLocations.Count + 1) * 3);
+        gameTracker.GotCrystal(numEnemiesToSpawn);
+    }
+
+    public void AttackUpgrade()
+    {
+        attackBoost += 20;
+        gameTracker.CloseMenu();
+    }
+
+    public void DefenseUpgrade()
+    {
+        defenseBoost += 15;
+        gameTracker.CloseMenu();
+    }
+
+    public void SpeedUpgrade()
+    {
+        speedBoost += 1;
+        gameTracker.CloseMenu();
     }
 }

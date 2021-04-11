@@ -242,9 +242,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41472a29d82255d4aac0b611f494c59b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 70
   gameState: {fileID: 11400000, guid: 2f24dda7adef4e2498e267ca5624d15e, type: 2}
-  speicalGained: 25
+  speicalGained: 10
   reachedPosition: 10
   attackRange: 10
   agroRange: 40

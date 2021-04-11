@@ -41,12 +41,12 @@ public class WindowCrystalPointer : MonoBehaviour
             }
         }
 
-        if(crystalShardPositions.Count == 0)
+        if(crystalShardPositions.Count == 0 & crystalPosition != null)
         {
             pointDir = new Vector2(crystalPosition.position.x, crystalPosition.position.y) - rb.position; 
         }
 
         float angle = Mathf.Atan2(pointDir.y, pointDir.x) * Mathf.Rad2Deg - 180f;
-        rb.rotation = angle;        
+        rb.rotation = angle; 
     }
 }
