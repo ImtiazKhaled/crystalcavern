@@ -1,126 +1,108 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
+
 public class Enemy : MonoBehaviour
 {
     public int health = 100;
-    public int enemyDamage = 25;
-    public Transform target;
-    public float speed = 200f;
-    public int speicalGained = 25;
-    public float nextWaypointDistance = 3f;
-    public Transform attackPoint;
-    public float attackRange = 0.5f;
-    public LayerMask playerLayer;
     public GameState gameState;
+    public int speicalGained = 25;
+    public float reachedPosition = 10f;
+    public float attackRange = 2f;
+    public float agroRange = 50f;
+    public Transform targetPosition;
+    public EnemyMovement enemyMovement;
+    public Animator animator;
+    public LayerMask playerLayer;
+    public int enemyDamage = 25;
+    public Vector3 currTargetPosition;
 
-    Path path;
-    int currentWayPoint = 0;
-    bool reachedEndOfPath = false;
-
-    Seeker seeker;
-    Rigidbody2D rb;
-    Transform enemyPosition;
+    Vector3 startPosition;
+    Vector3 roamPosition;
+    EnemyState state = EnemyState.ROAMING;
+    enum EnemyState {
+        ROAMING, CHASING, ATTACKING
+    }
 
     void Start()
     {
-        seeker = GetComponent<Seeker>();
-        rb = GetComponent<Rigidbody2D>();
-        enemyPosition = GetComponent<Transform>();
-
-        InvokeRepeating("UpdatePath", 0f, 1f);
+        startPosition = transform.position;
+        roamPosition = Util.GetRandomPosition(startPosition);
+        currTargetPosition = roamPosition;
     }
+
     void Update()
     {
-        if(path == null)
+        switch(state)
         {
-            return;
+            default:
+            case EnemyState.ROAMING:
+                enemyMovement.SetTarget(currTargetPosition);
+
+                float reachedPosition = 10f;
+
+                if(Vector3.Distance(transform.position, currTargetPosition) < reachedPosition)
+                {
+                    if(currTargetPosition == startPosition)
+                    {
+                        currTargetPosition = roamPosition;
+                    }
+                    else 
+                    {
+                        currTargetPosition = startPosition;
+                    }
+                }
+
+                FindTarget();
+                break;
+
+            case EnemyState.CHASING:
+                enemyMovement.SetTarget(targetPosition.position);
+
+                var distance = Vector3.Distance(transform.position, targetPosition.position);
+                FindTarget(10);
+
+                if(distance <= attackRange)
+                {
+                    enemyMovement.StopMove();
+                    state = EnemyState.ATTACKING;
+                    Attack();
+                }
+
+                break;
+            
+            case EnemyState.ATTACKING:
+                break;
         }
 
-        if(currentWayPoint >= path.vectorPath.Count)
+        if(!animator.GetCurrentAnimatorStateInfo(0).IsName("RockyMonsterAttack"))
         {
-            reachedEndOfPath = true;
-            EnemyHit();
-            return;
+            enemyMovement.ContinueMove();
+            FindTarget(10);
+        }
+    }
+
+    public virtual void Attack()
+    {
+
+    }
+
+    # region Enemy Movement
+    void FindTarget(float addtionalDist = 0)
+    {
+        if(Vector3.Distance(transform.position, targetPosition.position) <= agroRange + addtionalDist)
+        {
+            state = EnemyState.CHASING;    
+            currTargetPosition = targetPosition.position;
         }
         else
         {
-            reachedEndOfPath = false;
-        }
-
-        Vector2 direction = ((Vector2)path.vectorPath[currentWayPoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
-
-        rb.AddForce(force);
-
-        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWayPoint]);
-
-        if ( distance < nextWaypointDistance)
-        {
-            currentWayPoint++;
-        }
-
-        if (force.x >= 0.01f)
-        {
-            enemyPosition.localScale = new Vector3(-1f, 1f, 1f);
-        }
-        else if (force.x <= -0.01f)
-        {
-            enemyPosition.localScale = new Vector3(1f, 1f, 1f);
-        }
-    }
-
-    # region Enemy Pathfinding 
-    void UpdatePath()
-    {
-        if(seeker.IsDone()){
-            seeker.StartPath(rb.position, target.position, OnPathFound);
-        }
-    }
-    void OnPathFound(Path p)
-    {
-        if(!p.error)
-        {
-            path = p;
-            currentWayPoint = 0;
+            state = EnemyState.ROAMING;
         }
     }
     #endregion
 
-    # region Enemy Attack 
-    void EnemyHit()
-    {
-        // If the enemy is in the attack animation, don't attack
-        // This makes the enemy attack physically if the player is within range of the enemy
-        if(reachedEndOfPath) {
-            Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
-            foreach(Collider2D player in hitPlayer)
-            {
-                Player playerObj = player.GetComponent<Player>();
-
-                if(playerObj != null) 
-                {
-                    // Play enemy attack animation here
-                    playerObj.TakeDamage(enemyDamage);
-                }
-
-            }
-        }
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        if(attackPoint == null)
-            return;
-
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);        
-
-    }
-
-    #endregion
-
-    #region Enemy Health
+    # region Enemy Health
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -151,5 +133,5 @@ public class Enemy : MonoBehaviour
         // Play die animation here
         Destroy(gameObject);
     }
-    #endregion
+    # endregion
 }

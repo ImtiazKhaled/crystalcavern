@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
     public SpecialBar specialBar;
     public GameState gameState;
-
+    public Animator animator;
 
     void Start()
     {
@@ -44,9 +44,10 @@ public class Player : MonoBehaviour
     #region EnemyInteractions
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        health -= damage + gameState.defenseBoost;
         healthBar.SetHealth(health);
 
+        CinemachineShake.Instance.ShakeCamera(3, 0.1f);
         if(health <= 0)
         {
             Die();
@@ -56,6 +57,9 @@ public class Player : MonoBehaviour
     void Die()
     {
         // Play player death animation
+        gameState.playerDead = true;
+        animator.SetTrigger("IsDead");
+
         // and transition to death screen
     }
 
