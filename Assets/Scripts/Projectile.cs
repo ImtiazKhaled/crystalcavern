@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     public float collisionDuration = 0.5f;
     public int damage = 25;
     public bool playerAttack = true;
+    public GameState gameState;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -19,7 +20,7 @@ public class Projectile : MonoBehaviour
             // If the projectile collided with an enemy damage it
             Enemy enemy = gameObj.GetComponent<Enemy>();
             if(enemy != null) {
-                enemy.TakeDamage(damage);
+                enemy.TakeDamage(damage + gameState.attackBoost);
             }
         }
         else

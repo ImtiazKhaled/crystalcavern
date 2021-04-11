@@ -169,3 +169,4 @@ MonoBehaviour:
   collisionDuration: 0.5
   damage: 15
   playerAttack: 1
+  gameState: {fileID: 11400000, guid: 2f24dda7adef4e2498e267ca5624d15e, type: 2}

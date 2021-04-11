@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\SkullGirl.cs" />
     <Compile Include="Assets\Scripts\SpecialBar.cs" />
     <Compile Include="Assets\Scripts\States\GameState.cs" />
+    <Compile Include="Assets\Scripts\Util.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\WindowCrystalPointer.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />

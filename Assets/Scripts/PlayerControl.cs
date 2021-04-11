@@ -55,9 +55,10 @@ public class PlayerControl : MonoBehaviour
             animator.SetFloat("MoveSpeed", moveSpeed);
         }
 
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        weaponRb.MovePosition(new Vector2(weaponPosition.position.x, weaponPosition.position.y) + movement * moveSpeed * Time.fixedDeltaTime);
-        pointerRb.MovePosition(new Vector2(pointerPosition.position.x, pointerPosition.position.y) + movement * moveSpeed * Time.fixedDeltaTime);
+        Vector2 moved = movement * (moveSpeed + gameState.speedBoost) * Time.fixedDeltaTime;
+        rb.MovePosition(rb.position + moved);
+        weaponRb.MovePosition(new Vector2(weaponPosition.position.x, weaponPosition.position.y) + moved);
+        pointerRb.MovePosition(new Vector2(pointerPosition.position.x, pointerPosition.position.y) + moved);
 
         float angle = Mathf.Atan2(pointDir.y, pointDir.x) * Mathf.Rad2Deg;
         weaponRb.rotation = angle;

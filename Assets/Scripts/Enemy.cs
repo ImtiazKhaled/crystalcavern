@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         startPosition = transform.position;
-        roamPosition = GetRoamingPosition();
+        roamPosition = Util.GetRandomPosition(startPosition);
         currTargetPosition = roamPosition;
     }
 
@@ -88,17 +88,6 @@ public class Enemy : MonoBehaviour
     }
 
     # region Enemy Movement
-    Vector3 GetRoamingPosition()
-    {
-        // This gets a random roaming position for the enemy
-        return startPosition + GetRandomDir() * Random.Range(8f, 13f);
-    }
-
-    Vector3 GetRandomDir()
-    {
-        return new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
-    }
-
     void FindTarget(float addtionalDist = 0)
     {
         if(Vector3.Distance(transform.position, targetPosition.position) <= agroRange + addtionalDist)

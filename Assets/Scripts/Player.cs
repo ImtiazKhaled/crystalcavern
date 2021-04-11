@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
     #region EnemyInteractions
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        health -= damage + gameState.defenseBoost;
         healthBar.SetHealth(health);
 
         CinemachineShake.Instance.ShakeCamera(3, 0.1f);

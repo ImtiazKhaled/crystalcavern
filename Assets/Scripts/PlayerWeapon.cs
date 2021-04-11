@@ -52,7 +52,7 @@ public class PlayerWeapon : Weapon
         // deal damage to the enemies
         foreach (Enemy enemy in visibleEnemies)
         {
-            enemy.SpecialHit(specialDamage);
+            enemy.SpecialHit(specialDamage + gameState.attackBoost);
         }
     }
  

@@ -17,3 +17,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  crystalLocation: {fileID: 0}
+  player: {fileID: 0}
+  gameTracker: {fileID: 0}
+  playerDead: 0
+  numEnemies: 0
+  maxEnemies: 5
