@@ -9,7 +9,7 @@ public class PowerUpMenu : MonoBehaviour
     public void CloseMenu()
     {
         powerupUi.SetActive(false);
-        Time.timeScale = 1f;        
+        Time.timeScale = 1f;  
     }
     public void BringUpMenu()
     {

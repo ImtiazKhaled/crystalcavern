@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    int numCrystals = 0;
+    public int numCrystals = 0;
     public int health = 100;
     public int maxSpecial = 25;
     public int special = 0;
@@ -29,17 +29,6 @@ public class Player : MonoBehaviour
     {
         numCrystals++;
         // Play a crystal collection animation
-    }
-
-    public bool TakeACrystal()
-    {
-        if(numCrystals > 0)
-        {
-            numCrystals--;
-            return true;
-        }
-
-        return false;
     }
     #endregion
 

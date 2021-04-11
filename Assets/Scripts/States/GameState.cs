@@ -43,6 +43,11 @@ public class GameState : ScriptableObject
         maxEnemies += 5;
         int numEnemiesToSpawn = cyrstalMonsterMobNumber - ((crystalShardLocations.Count + 1) * 3);
         gameTracker.GotCrystal(numEnemiesToSpawn);
+
+        if(crystalShardLocations.Count == 1) 
+        {
+            gameTracker.LastCrystalShard();
+        }
     }
 
     public void AttackUpgrade()
@@ -61,5 +66,15 @@ public class GameState : ScriptableObject
     {
         speedBoost += 1;
         gameTracker.CloseMenu();
+    }
+
+    public void NotEnoughShards()
+    {
+        gameTracker.NotEnoughShards();
+    }
+
+    public void FinishedGame()
+    {
+        gameTracker.MergedShards();
     }
 }

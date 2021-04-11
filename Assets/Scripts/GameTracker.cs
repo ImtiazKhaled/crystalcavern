@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.SceneManagement;
 
 public class GameTracker : MonoBehaviour
 {
@@ -10,11 +11,17 @@ public class GameTracker : MonoBehaviour
     public GameObject skullGirl;
     public Transform playerLocation;
     public PowerUpMenu powerUpMenu;
+    public DialogueTrigger startLooking;
+    public DialogueTrigger lastCrystalShard;
+    public DialogueTrigger mergedShards;
+    public DialogueTrigger notEnoughShards;
 
     void Start()
     {
         gameState.Intialize();
         gameState.gameTracker = this;
+        startLooking.TriggerDialogue();
+
         Invoke("UpdateGraph", 5f);
         InvokeRepeating("SpawnEnemiesConstant", 10f, 10f);
     }
@@ -108,5 +115,27 @@ public class GameTracker : MonoBehaviour
     {
         // Check if the position is valid for the current screen bounds
         return location.x > -30 & location.x < 30 & location.y > 0 & location.y < 51;
+    }
+
+    public void LastCrystalShard()
+    {
+        lastCrystalShard.TriggerDialogue();
+    }
+
+    public void MergedShards()
+    {
+        mergedShards.TriggerDialogue();
+        
+        Invoke("EndScreen", 1f);
+    }
+
+    void EndScreen()
+    {
+        SceneManager.LoadScene("End");
+    } 
+
+    public void NotEnoughShards()
+    {
+        notEnoughShards.TriggerDialogue();
     }
 }

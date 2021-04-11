@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crystalsNeeded: 3
+  gameState: {fileID: 11400000, guid: 2f24dda7adef4e2498e267ca5624d15e, type: 2}
 --- !u!58 &5042323071176442015
 CircleCollider2D:
   m_ObjectHideFlags: 0

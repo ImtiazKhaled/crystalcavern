@@ -69,6 +69,9 @@
     <Compile Include="Assets\Scripts\CrystalMiddle.cs" />
     <Compile Include="Assets\Scripts\CrystalShard.cs" />
     <Compile Include="Assets\Scripts\DeathScreen.cs" />
+    <Compile Include="Assets\Scripts\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\GameTracker.cs" />

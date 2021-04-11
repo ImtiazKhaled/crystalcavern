@@ -1,29 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Crystal : MonoBehaviour
 {
-    public int crystalsNeeded = 3;
-    int numCrystals = 0;
+    public int crystalsNeeded = 0;
+    public GameState gameState;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         Player player = collision.gameObject.GetComponent<Player>();
         if(player != null)
-        {
-            bool tookCrystal = player.TakeACrystal();
-
-            if(tookCrystal)
+        { 
+            int playerCollectedCrystals = player.numCrystals;
+            if(playerCollectedCrystals == crystalsNeeded)
             {
-                numCrystals++;
-
-                if(numCrystals == crystalsNeeded)
-                {
-                    // Play some animation and dialog here
-                    SceneManager.LoadScene("End");
-                }
+                gameState.FinishedGame();
+            }
+            else
+            {
+                gameState.NotEnoughShards();
             }
 
         }

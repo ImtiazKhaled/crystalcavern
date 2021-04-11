@@ -10,7 +10,6 @@ public class CrystalShard : MonoBehaviour
         Player player = collision.gameObject.GetComponent<Player>();
         if(player != null)
         {
-            player.AcquireCrystal();
             gameState.GotCrystal();
             Destroy(gameObject);
         }
