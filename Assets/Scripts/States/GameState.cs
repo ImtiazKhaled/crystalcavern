@@ -27,9 +27,9 @@ public class GameState : ScriptableObject
         numEnemies = 0;
         maxEnemies = 5;
         cyrstalMonsterMobNumber = 7;
-        attackBoost = 550;
+        attackBoost = 15;
         speedBoost = 0;
-        defenseBoost = 500;
+        defenseBoost = 10;
     }
 
     public void EnemyDied(int speicalGained)

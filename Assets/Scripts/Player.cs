@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Player : MonoBehaviour
 {
@@ -83,6 +84,7 @@ public class Player : MonoBehaviour
         special = 0;
         canSpecial = false;
         specialBar.SetSpecial(special);
+        CinemachineShake.Instance.ShakeCamera(5, 0.5f);
     }
     #endregion
 

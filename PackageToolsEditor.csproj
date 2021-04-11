@@ -279,6 +279,9 @@
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>C:/Users/Imtiaz/Documents/programs/unity/zenojamegame/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>C:/Users/Imtiaz/Documents/programs/unity/zenojamegame/Library/PackageCache/com.unity.render-pipelines.core@7.5.3/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/Imtiaz/Documents/programs/unity/zenojamegame/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
