@@ -7,7 +7,6 @@ public class EnemyMovement : MonoBehaviour
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
     public Animator animator;
-
     Vector3 currentTarget;
     Path path;
     int currentWayPoint = 0;
