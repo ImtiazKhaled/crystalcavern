@@ -29,7 +29,7 @@ public class GameState : ScriptableObject
         cyrstalMonsterMobNumber = 7;
         attackBoost = 15;
         speedBoost = 0;
-        defenseBoost = 10;
+        defenseBoost = 15;
     }
 
     public void EnemyDied(int speicalGained)

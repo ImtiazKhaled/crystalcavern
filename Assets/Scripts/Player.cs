@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -61,6 +62,7 @@ public class Player : MonoBehaviour
         gameState.playerDead = true;
         animator.SetTrigger("IsDead");
 
+        SceneManager.LoadScene("Dead");
         // and transition to death screen
     }
 
