@@ -15,11 +15,10 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     public LayerMask playerLayer;
     public int enemyDamage = 25;
-
+    public Vector3 currTargetPosition;
 
     Vector3 startPosition;
     Vector3 roamPosition;
-    Vector3 currTargetPosition;
     EnemyState state = EnemyState.ROAMING;
     enum EnemyState {
         ROAMING, CHASING, ATTACKING
@@ -105,6 +104,7 @@ public class Enemy : MonoBehaviour
         if(Vector3.Distance(transform.position, targetPosition.position) <= agroRange + addtionalDist)
         {
             state = EnemyState.CHASING;    
+            currTargetPosition = targetPosition.position;
         }
         else
         {

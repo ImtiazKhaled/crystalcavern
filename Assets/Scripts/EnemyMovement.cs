@@ -11,7 +11,6 @@ public class EnemyMovement : MonoBehaviour
     Vector3 currentTarget;
     Path path;
     int currentWayPoint = 0;
-    bool reachedEndOfPath = false;
 
     Seeker seeker;
     Rigidbody2D rb;
@@ -39,12 +38,7 @@ public class EnemyMovement : MonoBehaviour
 
             if(currentWayPoint >= path.vectorPath.Count)
             {
-                reachedEndOfPath = true;
                 return;
-            }
-            else
-            {
-                reachedEndOfPath = false;
             }
 
             Vector2 direction = ((Vector2)path.vectorPath[currentWayPoint] - rb.position).normalized;
