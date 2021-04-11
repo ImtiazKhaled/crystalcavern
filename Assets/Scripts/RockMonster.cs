@@ -5,6 +5,8 @@ using Pathfinding;
 public class RockMonster : Enemy
 {
     Player playerObj;
+    public AudioClip rockyMonsterHit;
+
     public override void Attack()
     {
         EnemyHit();
@@ -23,7 +25,7 @@ public class RockMonster : Enemy
                 if(playerObj != null) 
                 {
                     animator.SetTrigger("IsAttacking");
-
+                    audioSource.PlayOneShot(rockyMonsterHit, 0.10f);
                     Invoke("DealDamage", 0.3f);
                 }
 

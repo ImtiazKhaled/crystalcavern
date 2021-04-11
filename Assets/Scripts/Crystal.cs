@@ -6,6 +6,8 @@ public class Crystal : MonoBehaviour
 {
     public int crystalsNeeded = 0;
     public GameState gameState;
+    public AudioSource audioSource;
+    public AudioClip mergeCrystals;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,6 +17,7 @@ public class Crystal : MonoBehaviour
             int playerCollectedCrystals = player.numCrystals;
             if(playerCollectedCrystals == crystalsNeeded)
             {
+                audioSource.PlayOneShot(mergeCrystals, 0.10f);
                 gameState.FinishedGame();
             }
             else

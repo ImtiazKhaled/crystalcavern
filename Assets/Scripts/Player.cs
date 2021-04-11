@@ -15,6 +15,9 @@ public class Player : MonoBehaviour
     public SpecialBar specialBar;
     public GameState gameState;
     public Animator animator;
+    public AudioSource audioSource;
+    public AudioClip playerDamage;
+    public AudioClip playerDeath;
 
     void Start()
     {
@@ -37,6 +40,7 @@ public class Player : MonoBehaviour
     {
         health -= damage - gameState.defenseBoost;
         healthBar.SetHealth(health);
+        audioSource.PlayOneShot(playerDamage, 0.10f);
 
         CinemachineShake.Instance.ShakeCamera(3, 0.1f);
         if(health <= 0)

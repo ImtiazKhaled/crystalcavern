@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     public LayerMask playerLayer;
     public int enemyDamage = 25;
     public Vector3 currTargetPosition;
+    public AudioSource audioSource;
+    public AudioClip enemyDeath;
 
     Vector3 startPosition;
     Vector3 roamPosition;
@@ -130,8 +132,8 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         gameState.EnemyDied(speicalGained);
-        // Play die animation here
-        Destroy(gameObject);
+        audioSource.PlayOneShot(enemyDeath, 0.10f);
+        Destroy(gameObject, 0.5f);
     }
     # endregion
 }

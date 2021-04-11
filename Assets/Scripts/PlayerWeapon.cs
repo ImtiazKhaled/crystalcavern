@@ -20,10 +20,10 @@ public class PlayerWeapon : Weapon
             {
                 Shoot();
             }
-            else if(Input.GetButtonDown("Fire2") & playerObj.canSpecial)
-            {
-                Special();
-            }
+            // else if(Input.GetButtonDown("Fire2") & playerObj.canSpecial)
+            // {
+            //     Special();
+            // }
         }
     }
 
