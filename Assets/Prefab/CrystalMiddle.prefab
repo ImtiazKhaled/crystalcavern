@@ -330,5 +330,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96765e465fae7c144a1c6e9da5dae15a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crystalLocation: {fileID: 0}
+  crystalLocation: {fileID: 6135472836352667015}
   gameState: {fileID: 11400000, guid: 2f24dda7adef4e2498e267ca5624d15e, type: 2}

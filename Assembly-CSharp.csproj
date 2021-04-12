@@ -72,11 +72,13 @@
     <Compile Include="Assets\Scripts\Dialogue.cs" />
     <Compile Include="Assets\Scripts\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
+    <Compile Include="Assets\Scripts\EndSceneActions.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\GameTracker.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\LevelGeneration.cs" />
+    <Compile Include="Assets\Scripts\MenuScreen.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\PlayerWeapon.cs" />

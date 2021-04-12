@@ -14,6 +14,7 @@ public class GameTracker : MonoBehaviour
     public DialogueTrigger lastCrystalShard;
     public DialogueTrigger mergedShards;
     public DialogueTrigger notEnoughShards;
+    public DialogueTrigger startLooking;
     public AudioSource audioSource;
     public AudioClip playerPowerup;
 
@@ -21,7 +22,7 @@ public class GameTracker : MonoBehaviour
     {
         gameState.Intialize();
         gameState.gameTracker = this;
-
+        Invoke("StartLooking", 1.5f);
         Invoke("UpdateGraph", 5f);
         InvokeRepeating("SpawnEnemiesConstant", 10f, 10f);
     }
@@ -116,6 +117,11 @@ public class GameTracker : MonoBehaviour
     {
         // Check if the position is valid for the current screen bounds
         return location.x > -30 & location.x < 30 & location.y > 0 & location.y < 51;
+    }
+
+    public void StartLooking()
+    {
+        startLooking.TriggerDialogue();
     }
 
     public void LastCrystalShard()

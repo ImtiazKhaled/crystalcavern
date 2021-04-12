@@ -58,7 +58,7 @@ public class GameState : ScriptableObject
 
     public void DefenseUpgrade()
     {
-        defenseBoost += 16;
+        defenseBoost += 7;
         gameTracker.CloseMenu();
     }
 

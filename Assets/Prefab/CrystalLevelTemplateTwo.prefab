@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a029a95081b0d408885698ae3d24ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crystalShardLocation: {fileID: 0}
+  crystalShardLocation: {fileID: 8653346386717664886}
   gameState: {fileID: 11400000, guid: 2f24dda7adef4e2498e267ca5624d15e, type: 2}
 --- !u!1001 &104134208447396127
 PrefabInstance:

@@ -12,7 +12,6 @@ public class WindowCrystalPointer : MonoBehaviour
         List<Transform> crystalShardPositions = gameState.crystalShardLocations;
         Transform crystalPosition = gameState.crystalLocation;
 
-
         Vector2 pointDir = new Vector2(0, 0);
 
 
