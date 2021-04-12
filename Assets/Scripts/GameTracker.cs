@@ -11,16 +11,16 @@ public class GameTracker : MonoBehaviour
     public GameObject skullGirl;
     public Transform playerLocation;
     public PowerUpMenu powerUpMenu;
-    public DialogueTrigger startLooking;
     public DialogueTrigger lastCrystalShard;
     public DialogueTrigger mergedShards;
     public DialogueTrigger notEnoughShards;
+    public AudioSource audioSource;
+    public AudioClip playerPowerup;
 
     void Start()
     {
         gameState.Intialize();
         gameState.gameTracker = this;
-        startLooking.TriggerDialogue();
 
         Invoke("UpdateGraph", 5f);
         InvokeRepeating("SpawnEnemiesConstant", 10f, 10f);
@@ -80,6 +80,7 @@ public class GameTracker : MonoBehaviour
 
     public void CloseMenu()
     {
+        audioSource.PlayOneShot(playerPowerup, 0.1f);
         powerUpMenu.CloseMenu();
     }
 

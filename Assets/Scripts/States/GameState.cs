@@ -25,7 +25,7 @@ public class GameState : ScriptableObject
         crystalLocation = null;
         numEnemies = 0;
         maxEnemies = 5;
-        cyrstalMonsterMobNumber = 12;
+        cyrstalMonsterMobNumber = 6;
         attackBoost = 0;
         speedBoost = 0;
         defenseBoost = 0;
@@ -40,8 +40,8 @@ public class GameState : ScriptableObject
     public void GotCrystal()
     {
         player.AcquireCrystal();
-        maxEnemies += 5;
-        int numEnemiesToSpawn = cyrstalMonsterMobNumber - ((crystalShardLocations.Count + 1) * 3);
+        maxEnemies += 2;
+        int numEnemiesToSpawn = cyrstalMonsterMobNumber - crystalShardLocations.Count;
         gameTracker.GotCrystal(numEnemiesToSpawn);
 
         if(crystalShardLocations.Count == 1) 
@@ -52,13 +52,13 @@ public class GameState : ScriptableObject
 
     public void AttackUpgrade()
     {
-        attackBoost += 20;
+        attackBoost += 22;
         gameTracker.CloseMenu();
     }
 
     public void DefenseUpgrade()
     {
-        defenseBoost += 15;
+        defenseBoost += 16;
         gameTracker.CloseMenu();
     }
 
