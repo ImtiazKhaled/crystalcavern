@@ -1,0 +1,1 @@
+A simple topdown shooter and rougelike game I made with [@sumaita](https://github.com/SumaitaSabaha) for Zenogamejam. You can try it out [here](https://imtiazkhaled.itch.io/crystal-cave). This was both our first time making a game, all art and music were also made by us. Hope you have fun playing the game. :)
